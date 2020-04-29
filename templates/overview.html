@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>TOP100 Universities</title>
+    <p><a href='/'>Back to Home</a></p>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results for TOP100 Universities in the United States</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>State</th>
+            <th>National Rank</th>
+            <th>School Type</th>
+            <th>Applications Accapted</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td><a href={{row[5]}}>{{row[0]}}</a></td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
